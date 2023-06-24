@@ -28,6 +28,8 @@ const init = function () {
   currentScoreP1.textContent = 0;
   currentScoreP2.textContent = 0;
 
+  console.log(diceEl.classList.contains('dice'));
+
   diceEl.classList.add('hidden');
   player0EL.classList.remove('player--winner');
   player1EL.classList.remove('player--winner');
@@ -37,7 +39,7 @@ const init = function () {
 
 init();
 
-// Switch player function
+// Switch player <function></function>
 const switchPlayer = function () {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
   activePlayer = activePlayer === 0 ? 1 : 0;
